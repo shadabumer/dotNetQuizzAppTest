@@ -1,0 +1,17 @@
+@model quizzApp.Models.Login
+<html>
+    <head></head>
+    <body>
+        <form method="GET">
+            <h3>
+                <label for="email">Email: </label>
+                <input asp-for="Login.email" type="email" id="email" value="user@example.com"/>
+            </h3>
+            <h3>
+                <label for="password">Password: </label>
+                <input asp-for="Login.password" type="password" id="password" />
+            </h3>
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </body>
+</html>

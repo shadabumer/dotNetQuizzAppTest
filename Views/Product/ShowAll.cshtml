@@ -1,0 +1,32 @@
+@model List<quizzApp.Models.Product>
+
+<html>
+    <body>
+        <h1>@ViewData["Heading"]</h1>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+            @foreach(var p in Model){
+                <tr>
+                    <td>@p.ID</td>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+                </tr>
+            }
+        </table>
+        <form method="GET">
+            <h3>
+                <label for="email">Email: </label>
+                <input type="email" id="email" value="user@example.com"/>
+            </h3>
+            <h3>
+                <label for="password">Password: </label>
+                <input type="password" id="password" />
+            </h3>
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </body>
+</html>
